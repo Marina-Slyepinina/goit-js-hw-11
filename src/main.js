@@ -18,6 +18,7 @@ function handleSubmit(event) {
     const userValue = event.target.elements["search-text"].value.toLowerCase();
 
     if (userValue.trim() === "") {
+        hideLoader();
         return iziToast.show({message: "Search query cannot be empty"});
     }
 
